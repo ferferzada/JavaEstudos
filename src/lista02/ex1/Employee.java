@@ -13,6 +13,9 @@ public class Employee {
     }
 
     public void applyRaise(double pcRaise){
+        if(pcRaise < 0 || pcRaise > 25){
+            return;
+        }
         double firstSalary = this.getSalary();
         double LastSalary = firstSalary * (1+ (pcRaise /100));
         this.lastSalary = firstSalary;
@@ -21,6 +24,9 @@ public class Employee {
     }
 
     public void salaryDifference(){
-        System.out.println("THE DIFFERENCE IS" + (this.getSalary() - this.lastSalary));
+        if(this.getSalary() < 0){
+            return;
+        }
+        System.out.println("THE DIFFERENCE IS " + (this.getSalary() - this.lastSalary));
     }
 }
