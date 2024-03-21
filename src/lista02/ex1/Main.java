@@ -8,7 +8,7 @@ public class Main {
 
        double pcRaise = 10;
        employee.applyRaise(pcRaise);
-       employee.diferencaDeSalario();
+       employee.salaryDifference();
    }
 
 }
