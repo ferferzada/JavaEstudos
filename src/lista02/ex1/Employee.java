@@ -1,14 +1,13 @@
 package lista02.ex1;
 
 public class Employee {
-
     private double salary;
-
     public double lastSalary;
-
-    public void setSalary(double salary){
+    public Employee(double salary){
         this.salary = salary;
     }
+
+
     public double getSalary(){
         return this.salary;
     }
@@ -17,7 +16,7 @@ public class Employee {
         double firstSalary = this.getSalary();
         double LastSalary = firstSalary * (1+ (pcRaise /100));
         this.lastSalary = firstSalary;
-        this.setSalary(LastSalary);
+        this.salary = LastSalary;
         System.out.println("The employee have applyRaise, end salary = "+this.getSalary());
     }
 
