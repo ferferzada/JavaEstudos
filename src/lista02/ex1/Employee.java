@@ -20,4 +20,8 @@ public class Employee {
         this.setSalary(LastSalary);
         System.out.println("The employee have applyRaise, end salary = "+this.getSalary());
     }
+
+    public void diferencaDeSalario(){
+        System.out.println("A DIFERENÇA É " + (this.getSalary() - this.lastSalary));
+    }
 }

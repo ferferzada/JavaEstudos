@@ -9,7 +9,7 @@ public class Main {
        double pcRaise = 10;
        employee.setSalary(salary);
        employee.applyRaise(pcRaise);
-       System.out.println("A DIFERENÇA É " + (employee.getSalary() - employee.lastSalary));
+       employee.diferencaDeSalario();
    }
 
 }
