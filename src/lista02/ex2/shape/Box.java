@@ -1,4 +1,4 @@
-package lista02.ex2;
+package lista02.ex2.shape;
 
 public class Box {
 
