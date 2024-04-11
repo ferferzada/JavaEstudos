@@ -9,7 +9,7 @@ public class ContactBook {
 
     public void insertContact(){
 
-        Contact contact = new Contact();
+        Contact contact = new Contact("");
         points.add(contact);
     }
 

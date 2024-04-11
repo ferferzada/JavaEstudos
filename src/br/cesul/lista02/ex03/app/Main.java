@@ -9,10 +9,12 @@ public class Main {
         int amount = 3;
         double desconto = 3;
         Product product = new Product(20,"maça");
-        SaleItem saleItem = new SaleItem(product,3);
+        SaleItem saleItem = new SaleItem(product,amount);
+
 
         Sale sale = new Sale(saleItem,desconto);
-        sale.CalculeFinalPrice();
+        sale.calculeFinalPrice();
+
 
     }
 }

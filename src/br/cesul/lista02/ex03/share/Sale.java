@@ -8,27 +8,26 @@ import java.util.List;
 public class Sale {
 
 
-
-    private List<SaleItem> arraySaleItem = new ArrayList<>();
+    private final List<SaleItem> arraySaleItem = new ArrayList<>();
     private final double discountPer;
 
-    private double salePrice;
-
-    public double getSalePrice() {
-        return salePrice;
-    }
 
     public Sale(SaleItem saleItem, double discountPer) {
-        this.arraySaleItem.add(saleItem);
+        addItem(saleItem);
         this.discountPer = discountPer;
     }
 
-    public void CalculeFinalPrice(){
+    public void addItem(SaleItem item){
+        this.arraySaleItem.add(item);
+    }
+
+    public void calculeFinalPrice(){
         int totalPrice = 0;
+
         for (SaleItem saleItem: arraySaleItem){
             totalPrice += saleItem.getTotal();
         }
-        System.out.println("Final price in your Buy is " + totalPrice* ((1 - (discountPer /100))) );
+        System.out.println("Final price in your Buy is " + totalPrice* (1 - (discountPer /100)));
     }
 
 
