@@ -1,10 +1,15 @@
 package br.cesul.lista02.ex03.share;
 
+import br.cesul.lista03.ex02.share.Vote;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Sale {
 
 
-    private  SaleItem saleItem;
 
+    private List<SaleItem> arraySaleItem = new ArrayList<>();
     private final double discountPer;
 
     private double salePrice;
@@ -14,13 +19,16 @@ public class Sale {
     }
 
     public Sale(SaleItem saleItem, double discountPer) {
-        this.saleItem = saleItem;
+        this.arraySaleItem.add(saleItem);
         this.discountPer = discountPer;
     }
 
     public void CalculeFinalPrice(){
-        salePrice = saleItem.getTotal() * ((1 - (discountPer /100))) ;
-        System.out.println("O PREÇO FINAL É " + salePrice + " do total de " + saleItem.getNome());
+        int totalPrice = 0;
+        for (SaleItem saleItem: arraySaleItem){
+            totalPrice += saleItem.getTotal();
+        }
+        System.out.println("Final price in your Buy is " + totalPrice* ((1 - (discountPer /100))) );
     }
 
 

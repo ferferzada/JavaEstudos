@@ -10,7 +10,7 @@ public class SaleItem {
         this.amount = amount;
     }
 
-    public double getTotal(){
+    public double getTotal() {
         return product.getPriceUnite() * amount;
     }
     public String getNome(){
