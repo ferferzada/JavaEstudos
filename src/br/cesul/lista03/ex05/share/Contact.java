@@ -6,11 +6,11 @@ public class Contact {
 
     private String Address;
 
-    private char Sex;
+    private String Sex;
 
     private String email;
 
-    public Contact(String name, String address, char sex, String email) {
+    public Contact(String name, String address, String sex, String email) {
         this.name = name;
         Address = address;
         Sex = sex;
@@ -33,11 +33,11 @@ public class Contact {
         Address = address;
     }
 
-    public char getSex() {
+    public String getSex() {
         return Sex;
     }
 
-    public void setSex(char sex) {
+    public void setSex(String sex) {
         Sex = sex;
     }
 

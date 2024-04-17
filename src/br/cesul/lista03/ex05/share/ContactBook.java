@@ -7,18 +7,17 @@ public class ContactBook {
 
     List<Contact> points = new ArrayList<>();
 
-    public void insertContact(){
+    public void insertContact(Contact contact){
 
-        Contact contact = new Contact("");
         points.add(contact);
     }
 
     public void removeContact(String name){
-       for (Contact contact : points) {
-        if(contact.getName() == name){
-            points.remove(contact);
+        for (Contact contact : points) {
+            if(contact.getName() == name){
+                points.remove(contact);
+            }
         }
-       }
     }
 
     public void listContacts(){
