@@ -14,7 +14,7 @@ public class ContactBook {
 
     public void removeContact(String name){
         for (Contact contact : points) {
-            if(contact.getName() == name){
+            if (contact.getName().equalsIgnoreCase(name)) {
                 points.remove(contact);
             }
         }
